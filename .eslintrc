@@ -1,0 +1,12 @@
+{
+	"extends": [
+		"@veritem",
+		"plugin:vitest/all"
+	],
+	"rules": {
+		"indent": [
+			2,
+			"tab"
+		]
+	}
+}

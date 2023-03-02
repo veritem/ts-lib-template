@@ -1,0 +1,42 @@
+{
+	"name": "ts-lib-template",
+	"version": "0.0.1",
+	"description": "package template description here",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"keywords": [
+		"typescript",
+		"template",
+		"library"
+	],
+	"exports": {
+		".": {
+			"require": "./dist/index.cjs",
+			"default": "./dist/index.mjs",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "unbuild",
+		"test": "vitest",
+		"lint": "eslint . --ext .ts",
+		"lint:fix": "eslint . --ext .ts --fix",
+		"release": "pnpm build && bumpp package.json --commit --push --tag && pnpm publish"
+	},
+	"author": "Verite Mugabo <mugaboverite@gmail.com> (https://veritem.me/)",
+	"license": "MIT",
+	"devDependencies": {
+		"@veritem/eslint-config": "^0.0.6",
+		"eslint": "^8.35.0",
+		"unbuild": "^1.1.2",
+		"vitest": "^0.29.2"
+	},
+	"dependencies": {
+		"bumpp": "^9.0.0",
+		"eslint-plugin-vitest": "^0.0.53"
+	}
+}
